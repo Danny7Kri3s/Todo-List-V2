@@ -65,16 +65,16 @@ const TodoWrapper = () => {
           <div key={todo.id}>
             <EditTodo todo={todo} dispatch={dispatch}/>
           </div>
-        ) : (
+          ) : (
           <div key={todo.id}>
-          <Todo todo={todo} dispatch={dispatch}/>
-        </div>
-        )
+            <Todo todo={todo} dispatch={dispatch}/>
+          </div>
+          )
           
         ))}
 
         
-    </div>
+      </div>
     </div>
   )
 }
