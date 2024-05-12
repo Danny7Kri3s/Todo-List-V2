@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .input {
+    @apply outline-none bg-transparent border-2 border-[#8758ff] p-1 md:w-[50%] w-[70%] text-white 
+  }
+
+  .input-btn {
+    @apply bg-[#8758ff] border-2 border-[#8758ff] py-1 px-1 text-white font-[500] text-[1rem]
+  }
+
+  .todo-wrapper {
+    @apply p-[2rem] bg-sky-950 w-[90%] md:w-[70%] lg:w-[50%] mx-auto rounded-md mt-[5rem]
+  }
+
+  .completed {
+    @apply text-gray-500 line-through cursor-pointer font-ubunMs font-bold break-words whitespace-normal !important
+  }
+
+  .incompleted {
+    @apply text-white cursor-pointer font-ubunMs font-bold break-normal whitespace-normal text-[0.9rem] md:text-[1.2rem] !important
+  }
+
+  .footer {
+    @apply p-[2rem] bg-sky-950 w-[90%] md:w-[70%] lg:w-[50%] text-[0.9rem] md:text-[1rem] mx-auto rounded-md mt-[2rem] text-white font-ubunMs
+  }
+}
+
+p {
+  word-break: break-all !important; 
+}
