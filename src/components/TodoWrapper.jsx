@@ -9,6 +9,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 uuidv4()
 
+// I used useReducer hooks to manage state and functions.
+
 const reducer = (todos, action) => {  
   switch (action.type) {
     case ACTIONS.ADD_TODO:
@@ -33,12 +35,14 @@ const reducer = (todos, action) => {
   }
 };
 
+// returning an object for a add todo in reducer function
 const newTodo = (name) => {
   return {id: uuidv4(), name: name, complete: false, isEditing: false}
 }
 
 const TodoWrapper = () => {
 
+  // saving the data in localstorage(loacal database) in the web browser
   const initialState = JSON.parse(localStorage.getItem('todos')) || [];
   const [todos, dispatch] = useReducer(reducer, initialState);
   const [name, setName] = useState('');
